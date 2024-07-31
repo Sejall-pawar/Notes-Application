@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&family=Rubik+Bubbles&display=swap');
+
+h1{
+    text-align: center;
+    font-family: "Rubik Bubbles", system-ui;
+    font-size: 50px;
+    color: #00ace6;
+}
+
+.art-tasks-container{
+    display: flex;
+    justify-content: space-evenly;
+    overflow-y: scroll;
+}
+
+.art-task{
+    display: block;
+    border: 2px solid #00ace6;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px auto;
+    width: 450px;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    font: bold;
+}
+
+.btn-remove{
+    cursor: pointer;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    background-color: #00ace6;
+    color: white;
+}
+
+.art-input-container{
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    gap: 25px;
+}
+
+.art-input{
+    width: 350px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 2px solid #00ace6;
+}
+
+.btn-add{
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+    background-color: #00ace6;
+    color: white;
+}

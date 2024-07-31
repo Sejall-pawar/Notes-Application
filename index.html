@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artistic Explorations</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
             "Creative Writing",
             "Painting and Drawing",
             "DIY and Craft Projects",
-            "Music and Performing Arts"
+            "Music and Performing Arts",
         ];
 
         function showTasks() {
@@ -34,8 +35,10 @@
 
             for (const task of tasks) {
                 artTasks.innerHTML += `
-            <div>
+            <div class="art-task">
                 ${task}
+
+                <button type="button" class="btn-remove">Remove</button>
             </div>
             `
             }
