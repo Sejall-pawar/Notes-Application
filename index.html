@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes-Application</title>
+    <title>Artistic Explorations</title>
 </head>
+
 <body>
     <h1>Artistic Explorations</h1>
 
-    <div class="notes-input-container">
-       <input type="text" placeholder="Write Your Note Here" class="note-input">
-       <button type="button" class="btn-add">Add Note</button>
+    <div id="art-tasks-container">
+
+    </div>
+
+    <div class="art-input-container">
+        <input type="text" placeholder="Write Your Note Here" class="art-input">
+        <button type="button" class="btn-add">Add Task</button>
     </div>
 
     <script>
-       const notes = [
-        "Daily Sketching",
-        "Creative Writing",
-        "Painting and Drawing",
-        "DIY and Craft Projects",
-        "Music and Performing Arts"
-       ];
+        const tasks = [
+            "Daily Sketching",
+            "Creative Writing",
+            "Painting and Drawing",
+            "DIY and Craft Projects",
+            "Music and Performing Arts"
+        ];
+
+        function showTasks() {
+            const artTasks = document.getElementById('art-tasks-container');
+            artTasks.innerHTML = "";
+
+            for (const task of tasks) {
+                artTasks.innerHTML += `
+            <div>
+                ${task}
+            </div>
+            `
+            }
+        }
+
+        showTasks();
     </script>
 </body>
+
 </html>
