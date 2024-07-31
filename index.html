@@ -38,13 +38,19 @@
             <div class="art-task">
                 ${task}
 
-                <button type="button" class="btn-remove">Remove</button>
+                <button type="button" class="btn-remove" onclick="removetask('${task}')">Remove</button>
             </div>
             `
             }
         }
-
         showTasks();
+
+        function removetask(task){
+            const taskIndex = tasks.indexOf(task);
+            tasks.splice(taskIndex, 1);
+
+            showTasks();
+        }
     </script>
 </body>
 
