@@ -17,19 +17,28 @@
 
     <div class="art-input-container">
         <input type="text" placeholder="Write Your Note Here" class="art-input">
-        <button type="button" class="btn-add">Add Task</button>
+        <button type="button" class="btn-add" onclick="addtask()">Add Task</button>
     </div>
 
     <script>
-        const tasks = [
-            "Daily Sketching",
-            "Creative Writing",
-            "Painting and Drawing",
-            "DIY and Craft Projects",
-            "Music and Performing Arts",
-        ];
+        const tasks = [];
+
+        function showfromLocalStorage(){
+            const allTasks = JSON.parse(localStorage.getItem('allTasks'));
+
+            if(allTasks){
+                tasks.push(...allTasks)
+            }
+
+            showTasks();
+        }
+
+        showfromLocalStorage();
 
         function showTasks() {
+
+            localStorage.setItem('allTasks', JSON.stringify(tasks))
+
             const artTasks = document.getElementById('art-tasks-container');
             artTasks.innerHTML = "";
 
@@ -43,7 +52,6 @@
             `
             }
         }
-        showTasks();
 
         function removetask(task){
             const taskIndex = tasks.indexOf(task);
