@@ -8,11 +8,9 @@ h1{
 }
 
 .art-tasks-container{
-    display: flex;
-    justify-content: space-evenly;
+    height: 300px;
     overflow-y: scroll;
 }
-
 .art-task{
     display: block;
     border: 2px solid #00ace6;
@@ -34,7 +32,6 @@ h1{
     background-color: #00ace6;
     color: white;
 }
-
 .art-input-container{
     display: flex;
     justify-content: center;
@@ -56,4 +53,5 @@ h1{
     border: none;
     background-color: #00ace6;
     color: white;
+    cursor: pointer;
 }

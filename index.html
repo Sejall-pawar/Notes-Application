@@ -11,12 +11,12 @@
 <body>
     <h1>Artistic Explorations</h1>
 
-    <div id="art-tasks-container">
+    <div id="art-tasks-container" class="art-tasks-container">
 
     </div>
 
     <div class="art-input-container">
-        <input type="text" placeholder="Write Your Note Here" class="art-input">
+        <input type="text" placeholder="Write Your Note Here" class="art-input" id="art-input">
         <button type="button" class="btn-add" onclick="addtask()">Add Task</button>
     </div>
 
@@ -58,6 +58,22 @@
             tasks.splice(taskIndex, 1);
 
             showTasks();
+        }
+
+        function addtask(){
+            const addinput = document.getElementById('art-input');
+            const task = addinput.value;
+
+            if(!task)
+        {
+            alert('Please Enter A Task')
+            return;
+        }
+
+        tasks.unshift(task);
+        showTasks();
+        addinput.value='';
+        
         }
     </script>
 </body>
